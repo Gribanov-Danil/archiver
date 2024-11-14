@@ -88,7 +88,6 @@ export class HuffmanCompressor {
 
 
     private calculateEntropy(): number {
-        console.log(this.frequencyTable.size)
         const n = this.frequencyTable.size;
         return Math.log2(n);
     }
@@ -100,7 +99,6 @@ export class HuffmanCompressor {
         for (const [char, freq] of this.frequencyTable) {
             const probability = freq / totalSymbols;
             const codeLength = this.huffmanCodes.get(char)?.length || 0;
-            console.log(codeLength)
             L_cp += probability * codeLength;
         }
 

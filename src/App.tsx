@@ -24,6 +24,8 @@ function App() {
         const compressed = huffmanCompressor.compress(data.toArchiveText);
         setCompressed(compressed)
 
+        console.log("Сжатый текст:", compressed);
+
         setCompressionRatio(huffmanCompressor.getCompressionRatio())
         setRelativeEfficiencyFactor(huffmanCompressor.getCompressionEfficiency())
 
