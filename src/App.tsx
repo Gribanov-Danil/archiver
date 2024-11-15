@@ -77,8 +77,9 @@ function App() {
                     </Box>
                 </Stack>
             </form>
-            {compressed && <Typography variant="body1">{`Сжатый текст: ${compressed}`}</Typography>}
-            {decompressed && <Typography variant="body1">{`Деархивированный текст: ${decompressed}`}</Typography>}
+            <Box sx={{maxWidth: '800px', overflowY: 'scroll'}}>{compressed && <Typography variant="body1">{`Сжатый текст: ${compressed}`}</Typography>}</Box>
+            <Box sx={{maxWidth: '800px', overflowY: 'scroll'}}>{decompressed && <Typography variant="body1">{`Деархивированный текст: ${decompressed}`}</Typography>}</Box>
+        
             {!!compressionRatio &&
                 <Typography variant="body1">{`Коэффициент сжатия (K_cc): ${compressionRatio}`}</Typography>}
             {!!relativeEfficiencyFactor && <Typography
